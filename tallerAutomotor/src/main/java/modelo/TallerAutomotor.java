@@ -5,6 +5,8 @@
 
 package modelo;
 
+import Controladores.Menu;
+
 /**
  *
  * @author ARIANA
@@ -12,6 +14,9 @@ package modelo;
 public class TallerAutomotor {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Menu m = new Menu();
+        m.menu();
+
     }
 }
