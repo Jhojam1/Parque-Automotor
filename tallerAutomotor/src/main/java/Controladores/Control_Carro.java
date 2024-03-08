@@ -1,10 +1,11 @@
 package Controladores;
 
+import Acciones.Acciones;
 import modelo.Carro;
 
 import java.util.Scanner;
 
-public class Control_Carro {
+public class Control_Carro implements Acciones {
     Carro c = new Carro();
 
     public void crearCarro() {
@@ -27,34 +28,41 @@ public class Control_Carro {
         String placa = sc.nextLine();
         c.setPlaca(placa);
 
-        System.out.println("Ingrese el motivo de ingreso del carro al taller");
-        String motivo = sc.nextLine();
-        c.setMotivoIngreso(motivo);
 
         System.out.println("Ingrese la velocidad maxima del carro");
         String velocidad = sc.nextLine();
         c.setVelocidadMaxima(velocidad);
 
-        System.out.println("Ingrese los km actuales del carro");
-        double km = sc.nextDouble();
-        c.setKmActual(km);
+        System.out.println("Ingrese la traccion del carro");
+        String traccion = sc.nextLine();
+        c.setTraccion(traccion);
 
+        System.out.println("----------------------Pruebas-----------------------");
+        arrancar();
+        frenar();
+        estacionar();
+        direccion();
 
     }
 
-    public void acelerarCarro(){
-        System.out.println("El carro "+ c.getMarca()+ " acelero");
+    @Override
+    public void arrancar() {
+            System.out.println("El carro "+ c.getMarca()+ " acelero");
+
     }
 
-    public void frenarCarro(){
+    @Override
+    public void frenar() {
         System.out.println("El carro "+ c.getMarca()+ " freno");
     }
 
-    public void estacionarCarro(){
-        System.out.println("El carro " + c.getMarca()+ " se estaciono");
+    @Override
+    public void direccion() {
+        System.out.println("El carro " + c.getMarca()+ " giro");
     }
 
-    public void direccionCarro(){
-        System.out.println("El carro " + c.getMarca()+ " giro");
+    @Override
+    public void estacionar() {
+        System.out.println("El carro " + c.getMarca()+ " se estaciono");
     }
 }

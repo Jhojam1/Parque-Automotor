@@ -3,34 +3,25 @@ package modelo;
 public class Carro extends Vehiculo{
 
     
-    private double kmActual;
+    private String traccion;
 
     public Carro() {
     }
 
-    public Carro(double kmActual, double velocidadMax) {
-        this.kmActual = kmActual;
+    public Carro(String traccion) {
+        this.traccion = traccion;
     }
 
-    public Carro(String marca, String modelo, String color, String placa, String motivoIngreso, String velocidadMaxima, double kmActual) {
-        super(marca, modelo, color, placa, motivoIngreso, velocidadMaxima);
-        this.kmActual = kmActual;
+    public Carro(String marca, String modelo, String color, String placa, String velocidadMaxima, String traccion) {
+        super(marca, modelo, color, placa , velocidadMaxima);
+        this.traccion = traccion;
     }
 
-    /**
-     * @return the kmActual
-     */
-    public double getKmActual() {
-        return kmActual;
+    public String getTraccion() {
+        return traccion;
     }
 
-    /**
-     * @param kmActual the kmActual to set
-     */
-    public void setKmActual(double kmActual) {
-        this.kmActual = kmActual;
+    public void setTraccion(String traccion) {
+        this.traccion = traccion;
     }
-
-
-    
 }
