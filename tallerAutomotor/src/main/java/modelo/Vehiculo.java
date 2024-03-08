@@ -6,18 +6,16 @@ public class Vehiculo {
     private String modelo;
     private String color;
     private String placa;
-    private String motivoIngreso;
     private String velocidadMaxima;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(String marca, String modelo, String color, String placa, String motivoIngreso, String velocidadMaxima) {
+    public Vehiculo(String marca, String modelo, String color, String placa, String velocidadMaxima) {
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.placa = placa;
-        this.motivoIngreso = motivoIngreso;
         this.velocidadMaxima = velocidadMaxima;
     }
 
@@ -75,20 +73,6 @@ public class Vehiculo {
      */
     public void setPlaca(String placa) {
         this.placa = placa;
-    }
-
-    /**
-     * @return the motivoIngreso
-     */
-    public String getMotivoIngreso() {
-        return motivoIngreso;
-    }
-
-    /**
-     * @param motivoIngreso the motivoIngreso to set
-     */
-    public void setMotivoIngreso(String motivoIngreso) {
-        this.motivoIngreso = motivoIngreso;
     }
 
     public void setVelocidadMaxima(String velocidadMaxima){this.velocidadMaxima = velocidadMaxima;}
